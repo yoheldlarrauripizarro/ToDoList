@@ -50,7 +50,7 @@ class TaskViewModel(application: Application): ViewModel() {
     companion object {
         val TaskViewModelFactory = object: ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T =
-                TaskViewModel(checkNotNull(extras[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY])) as Tg
+                TaskViewModel(checkNotNull(extras[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY])) as T
         }
     }
 }
